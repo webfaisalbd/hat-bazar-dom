@@ -2,11 +2,18 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+.body-bg-color-change{
+  background-color: #dce0e8;
+}
+.card-bg-color-change{
+  background-color: #f3f5f7;
+}
+
 .title{
-  color: cyan;
+  color: #2196f3;
 }
 .title:hover{
-  color: lightskyblue;
+  color: lightskyblue ;
 }
 .search-field{
   margin-bottom: 15px;
@@ -79,6 +86,10 @@ div.search-box::after {
 }
 .cart-main {
   padding-right: 30px;
+  
+}
+#my-cart{
+  background-color: lightsteelblue;
 }
 @media only screen and (max-width: 768px) {
   #all-products {
