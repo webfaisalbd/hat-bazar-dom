@@ -2,25 +2,23 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
-.body-bg-color-change{
+.body-design{
   background-color: #dce0e8;
 }
-.card-style{
-  background-color: #f3f5f7;
-  max-height: 35rem;
-  border-radius: 10px;
-
-}
-
+/* title  */
 .title{
   color: #2196f3;
 }
 .title:hover{
   color: lightskyblue ;
 }
-.search-field{
-  margin-bottom: 15px;
+
+.card-style{
+  background-color: #f3f5f7;
+  max-height: 35rem;
+  border-radius: 10px;
 }
+
 /* --- search box and button style ---  */
 div.search-box input[type=text] {
   padding: 10px;
@@ -52,7 +50,12 @@ div.search-box::after {
   clear: both;
   display: table;
 }
-/* -----------  */
+
+.search-field{
+  margin-bottom: 15px;
+}
+
+
 /* icon color  */
 .icon-color{
   color: goldenrod;
@@ -97,6 +100,7 @@ div.search-box::after {
 #my-cart{
   background-color: lightsteelblue;
 }
+/* for responsiveness  */
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
