@@ -8,29 +8,39 @@ body {
 .title:hover{
   color: lightskyblue;
 }
-.search-field {
-  border: none;
-  border-radius: 50px;
-  padding: 5px;
-  outline: none;
+/* --- search box and button style ---  */
+div.search-box input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
 }
-.search-field:hover {
-  outline: none;
-  border: none;
+
+div.search-box button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
 }
-.search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 50px;
-  border-right: none;
+
+div.search-box button:hover {
+  background: #0b7dda;
 }
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 25px;
+
+div.search-box::after {
+  content: "";
+  clear: both;
+  display: table;
 }
+/* -----------  */
+
 
 #all-products {
   display: grid;

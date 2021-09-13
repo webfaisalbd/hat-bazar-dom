@@ -15,6 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- font  awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -22,15 +25,22 @@
     <h1 class="text-center fw-bold title">HAT BAZAR</h1>
   </header>
   <main class="main">
+    <!-- search box and button added  -->
     <div class="search-field">
-      <div class="search-box">
+      <div class="search-box" action="/action_page.php" style="margin:auto;max-width:500px">
+        <input id="input-field" class="search-field" type="text" placeholder="Search.." name="search2">
+        <button id="search-btn" onclick="loadProducts()" type="button"><i class="fa fa-search"></i></button>
+      </div>
+      <!-- <div class="search-box">
         <input id="input-field" class="search-field" type="text" />
         <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
         </button>
-      </div>
+      </div> -->
     </div>
+
+    <!-- -------card added  ------- -->
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
