@@ -18,7 +18,7 @@ const showProducts = (products) => {
       </div>
       <div>
       <h5>${product.title}</h5>
-      <h6>Category: ${product.category}</h6>
+      <h5>Category: ${product.category}</h5>
       <h2>Price: $ ${product.price}</h2>
       <h5>Number of Rating: ${product.rating.count}</h5>
       <h5>Average of Rating: ${product.rating.rate}</h5>
@@ -52,12 +52,12 @@ const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = total;
+  document.getElementById(id).innerText = total.toFixed(2);
 };
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = value;
+  document.getElementById(id).innerText = value.toFixed(2);
 };
 
 // update delivery charge and total Tax
@@ -82,7 +82,7 @@ const updateTotal = () => {
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
-  document.getElementById("total").innerText = grandTotal;
+  document.getElementById("total").innerText = grandTotal.toFixed(2);
 
 };
 
