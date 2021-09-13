@@ -5,8 +5,11 @@ body {
 .body-bg-color-change{
   background-color: #dce0e8;
 }
-.card-bg-color-change{
+.card-style{
   background-color: #f3f5f7;
+  max-height: 33rem;
+  border-radius: 10px;
+
 }
 
 .title{

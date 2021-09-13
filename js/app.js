@@ -10,27 +10,23 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     const image = product.image;
     const div = document.createElement("div");
-    div.classList.add("product");
-    div.classList.add("ms-5");
-    div.classList.add("mb-5");
-    div.classList.add("shadow-lg");
-    div.classList.add("rounded-3");
-    div.classList.add("card-bg-color-change");
+    div.classList.add("product", "ms-5", "mb-5", "shadow-lg", "rounded-3", "card-style");
 
-    // div.setAttribute('style', 'border-radius: 10px');
-    // div.setAttribute('style', 'background-color: #f1f1f1');
-    div.setAttribute('style', 'max-height: 33rem');
     div.innerHTML = `<div class="single-product">
       <div>
     <img class="product-image" src=${image}></img>
       </div>
+      <div>
       <h5>${product.title}</h5>
       <h6>Category: ${product.category}</h6>
       <h2>Price: $ ${product.price}</h2>
       <h5>Number of Rating: ${product.rating.count}</h5>
       <h5>Average of Rating: ${product.rating.rate}</h5>
+      </div>
+      <div class="d-flex justify-content-between">
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
+      </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
