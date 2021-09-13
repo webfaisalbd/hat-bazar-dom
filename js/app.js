@@ -9,6 +9,16 @@ const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     const image = product.image;
+    const ratingRates = Math.round(product.rating.rate);
+
+    function myFunc() {
+      const fruits = [];
+
+      for (var i = 1; i <= ratingRates; i++) {
+        fruits.push('<i class="fas fa-star icon-color"></i>');
+      }
+      return fruits;
+    }
     const div = document.createElement("div");
     div.classList.add("product", "ms-5", "mb-5", "shadow-lg", "rounded-3", "card-style");
 
@@ -17,17 +27,17 @@ const showProducts = (products) => {
     <img class="product-image" src=${image}></img>
       </div>
       <div>
-      <h5>${product.title}</h5>
-      <h5>Category: ${product.category}</h5>
-      <h2>Price: $ ${product.price}</h2>
-      <h5>Number of Rating: ${product.rating.count}</h5>
-      <h5>Average of Rating: ${product.rating.rate}</h5>
-      </div>
-      <div class="d-flex justify-content-between">
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
-      </div>
-      `;
+      <h5><span class="fw-bold">Title:</span>${product.title}</h5>
+      <h4><span class="fw-bold">Category:</span> ${product.category}</h4>
+      <h2><span class="fw-bold">Price:</span> $ ${product.price}</h2>
+      <h5><span class="fw-bold text-danger">Average of Rating:</span>${myFunc()} (${product.rating.rate})</h5 >
+      <h5><span class="fw-bold text-danger">Number of Rating:</span>(${product.rating.count})</h5>
+      </div >
+  <div class="d-flex justify-content-between">
+    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+    <button id="details-btn" class="btn btn-danger">Details</button></div>
+      </div >
+  `;
     document.getElementById("all-products").appendChild(div);
   }
 };

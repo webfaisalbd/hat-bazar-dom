@@ -53,7 +53,10 @@ div.search-box::after {
   display: table;
 }
 /* -----------  */
-
+/* icon color  */
+.icon-color{
+  color: goldenrod;
+}
 
 #all-products {
   display: grid;
